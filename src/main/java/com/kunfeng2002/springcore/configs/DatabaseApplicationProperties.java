@@ -12,7 +12,8 @@ public class DatabaseApplicationProperties {
             @Value("${spring.datasource.url}") String dbUrl,
             @Value("${spring.datasource.username}") String dbUser
     ) {
-        System.out.println("DB URL: " + dbUrl);
+        String dbName = (dbUrl.substring(dbUrl.lastIndexOf("/") + 1)).split("\\?")[0];
+        System.out.println("DB Name: " + dbName);
         System.out.println("DB User: " + dbUser);
     }
 }

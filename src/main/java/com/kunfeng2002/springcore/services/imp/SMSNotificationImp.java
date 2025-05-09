@@ -5,8 +5,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-@Component
-@Qualifier("smsNotificationImp")
+@Component("smsNotificationImp")
 @Primary
 public class SMSNotificationImp implements NotificationServices {
 
