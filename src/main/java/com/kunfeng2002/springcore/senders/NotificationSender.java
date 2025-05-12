@@ -8,11 +8,16 @@ import org.springframework.stereotype.Component;
 public class NotificationSender {
     private NotificationServices notificationServices;
 
+    // Singleton
+//    public NotificationSender(@Qualifier("pushNotificationImp") NotificationServices notificationServices) {
+//        this.notificationServices = notificationServices;
+//    }
+//    public void sendNotification(String message) {
+//        notificationServices.sendNotification(message);
+//    }
 
-    public NotificationSender(@Qualifier("pushNotificationImp") NotificationServices notificationServices) {
+    // Prototype
+    public NotificationSender(@Qualifier("emailNotificationImp") NotificationServices notificationServices) {
         this.notificationServices = notificationServices;
-    }
-    public void sendNotification(String message) {
-        notificationServices.sendNotification(message);
     }
 }

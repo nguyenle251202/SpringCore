@@ -1,19 +1,20 @@
 package com.kunfeng2002.springcore.configs;
 
-import org.springframework.context.ApplicationContext;
+import com.kunfeng2002.springcore.beans.Prototype;
+import com.kunfeng2002.springcore.beans.Singleton;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Scope;
 
 public class AppConfig {
-    ApplicationContext applicationContext;
-
-    public AppConfig(ApplicationContext applicationContext) {
-        this.applicationContext = applicationContext;
+    @Bean
+    @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+    public Prototype prototypeBean() {
+        return new Prototype();
     }
 
-    public Object getBean(String beanName) {
-        return applicationContext.getBean(beanName);
-    }
-
-    public <T> T getBean(Class<T> beanClass) {
-        return applicationContext.getBean(beanClass);
+    @Bean
+    public Singleton singletonBean() {
+        return new Singleton();
     }
 }
