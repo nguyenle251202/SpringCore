@@ -9,7 +9,7 @@ public class NotificationSender {
     private NotificationServices notificationServices;
 
 
-    public NotificationSender(@Qualifier("emailNotificationImp") NotificationServices notificationServices) {
+    public NotificationSender(@Qualifier("pushNotificationImp") NotificationServices notificationServices) {
         this.notificationServices = notificationServices;
     }
     public void sendNotification(String message) {

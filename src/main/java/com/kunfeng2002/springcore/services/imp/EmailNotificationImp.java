@@ -12,6 +12,6 @@ public class EmailNotificationImp implements NotificationServices {
 
     @Override
     public void sendNotification(String message) {
-        System.out.println("Sending email notification: " + message);
+        System.out.println("EMAIL: " + message);
     }
 }
