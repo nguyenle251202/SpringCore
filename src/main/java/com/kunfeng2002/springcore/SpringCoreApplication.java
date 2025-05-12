@@ -16,7 +16,7 @@ public class SpringCoreApplication {
         initializeMessage1.setMessage("Hi, I'm KunFeng2002");
         //
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringCoreApplication.class);
-        NotificationSender sender = context.getBean(NotificationSender.class);
+//        NotificationSender sender = context.getBean(NotificationSender.class);
 //        sender.sendNotification("Message2: " + initializeMessage2.getMessage());
         EmailNotificationImp emailNotificationImp1 = (EmailNotificationImp) context.getBean("emailNotificationImp");
         EmailNotificationImp emailNotificationImp2 = (EmailNotificationImp) context.getBean("emailNotificationImp");

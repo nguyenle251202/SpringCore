@@ -13,6 +13,5 @@ import static java.lang.annotation.ElementType.TYPE_USE;
 @Scope("prototype")
 public class Prototype {
     public Prototype() {
-        System.out.println("Prototype bean created");
     }
 }
